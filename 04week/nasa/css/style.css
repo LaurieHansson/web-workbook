@@ -1,0 +1,50 @@
+
+body{
+  margin: 0 auto;
+  width:850px;
+  font-family:"roboto";
+  font-family:"Bubbler One"
+}
+header{
+  background-image:url("../img/nasa-background.jpg");
+  background-size:cover;
+  height:450px;
+  width:850px;
+  margin:10px auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:40px;
+  font-weight:bolder;
+
+}
+h1{
+  font-family:"roboto";
+}
+.container{
+  height:324px;
+  width:850px;
+  background-color:#E6E6E6;
+display:flex;
+justify-content:space-around;
+font-family:"bubbler one";
+font-weight:400;
+
+}
+.content{
+  color:black;
+}
+
+
+button{
+  display:block;
+  background-color:#4D4D4D;
+  border:2px solid #4D4D4D;
+  height:30px;
+  width:100px;
+  color:white;
+  font-family:"roboto";
+  font-weight:bold;
+  font-size:15px;
+}
