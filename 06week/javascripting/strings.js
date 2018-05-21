@@ -1,3 +1,3 @@
 var someString='this is a string';
 
-console.log();
+console.log("this is a string");
