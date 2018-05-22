@@ -16,4 +16,4 @@ var a = 1, b = 2, c = 3;
              })();
          })();
      })();
-console.log(1"a+",'b:8','c" +')
+console.log(1"a+",'b:8','c" +'b)
