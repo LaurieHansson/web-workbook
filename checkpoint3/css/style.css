@@ -1,0 +1,147 @@
+body{
+  color:black;
+}
+ .mainCookie:active {
+  transform: scale(0.95);
+}
+imgWrap .mainCookie .chip {
+  background-color: #442813;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 100%;
+  position: absolute;
+  border: 0.5vw solid black;
+}
+imgWrap .mainCookie .chip1 {
+  top: 20vw;
+  left: 10vw;
+}
+imgWrap .mainCookie .chip2 {
+  top: 10vw;
+  left: 20vw;
+}
+imgWrap .mainCookie .chip3 {
+  top: 9vw;
+  left: 11vw;
+}
+imgWrap .mainCookie .chip4 {
+  top: 15vw;
+  left: 7vw;
+}
+imgWrap .mainCookie .chip5 {
+  top: 3vw;
+  left: 19vw;
+}
+imgWrap .mainCookie .chip6 {
+  top: 22vw;
+  left: 22vw;
+}
+imgWrap .mainCookie .chip7 {
+  top: 3vw;
+  left: 5vw;
+}
+imgWrap .mainCookie .chip8 {
+  top: 20vw;
+  left: 4vw;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+  background-color:lightblue;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+ul {
+  list-style-type: none;
+}
+ul li {
+  list-style-type: none;
+}
+
+p {
+  text-align: center;
+  margin: 10px;
+  font-family: raleway;
+  font-size: 4vw;
+}
+
+.pointer {
+  width: 10vw;
+}
+
+.wrap {
+  width: 50vw;
+  height: 100vh;
+  padding: 0;
+}
+.wrap li {
+  display: flex;
+  height: 30em;
+  padding: 30em;
+  border: 1px solid black;
+  margin: 0;
+}
+.wrap li img {
+  height: 15vh;
+}
+.wrap li h1 {
+  margin: 0;
+}
+
+.main {
+  border-right: 1px solid black;
+}
+
+.shop {
+  overflow-y: scroll;
+  padding: 0;
+}
+.shop button {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: quicksand;
+  font-size: 3vw;
+  background-color: transparent;
+  border-radius: 2px;
+ 
+  border: 1px solid white; 
+  background-color:tomato;
+  border-radius:20em;
+}
+.shop button:active {
+  border: 1px solid white; 
+  background-color:tomato;
+  border-radius:20em;
+}
+.shop button.active {
+
+  color: white;
+  border: 1px solid white
+  background-color:tomato;
+
+  border-radius:20em;
+}
+.shop p {
+  font-size: 2vw;
+  font-family: roboto slab;
+}
+
+
+.mainCookie {
+  width: 20em;
+  height: 20em;
+  background-color: #e9a252;
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
+  transition: 0.1s;
+  cursor: pointer;
+  position: relative;
+  border: 1vw solid black;
+}
