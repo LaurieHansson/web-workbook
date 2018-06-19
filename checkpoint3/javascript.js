@@ -1,95 +1,93 @@
- var cookies = 0;
- var  taps = 0;
- var  cursor = 0;
- var  grandma = 0;
- var mill = 0;
+//How many of everything you have to start out with
+var coffee = 0;
+ var clicks = 0;
+ var  tumbler = 0;
+ var intern = 0;
+ var  franchise = 0;
+
+//How much everything costs to start with
+var clickCost = 50;
+ var  tumblerCost = 15;
+ var   internCost = 100;
+var  franchiseCost = 1100;
+  
+//How much CPS you get (it starts as 0 but gets higher every time you buy one)
+var click = 1;
+var  tumblers = 0;
+ var  interns = 0;
+var  franchises = 0;
  
-//intial costs 
-var tapCost = 50;
-var  cursorCost = 40;
-var  bakerCost = 100;
-var  millCost = 1100;
-
-
-//How many cookies per second with different clickers and purchases
-var   taps = 1;
-  var tapper = 0;
-var   baker= 0;
- var  mills = 0;
-
-//Every time you click, you get a specific number of cookies 
-  document.querySelector(".mainCookie").addEventListener("click", function() {
-  cookies = cookies + click;
-  document.getElementById("cookies").innerHTML = cookies + "cookies";
+//Every time you click, you get X number of cookies
+document.querySelector(".coffee").addEventListener("click", function() {
+  coffee = coffee + click;
+  document.getElementById("coffee").innerHTML = coffee + " coffees";
 });
-//Every time you buy a power tap your taps and clicks double
-document.querySelector(".powerClick").addEventListener("click", function() {
-  if (cookies - clickCost >= 0) {
-    cookies = cookies - 50;
-    taps = taps * 2;
-    taps = taps 1;
-    tapCost = tapCost * 5;
+
+document.querySelector(".mrcoffee").addEventListener("click", function() {
+  if (coffee - clickCost >= 0) {
+    coffee = coffee - 50;
+    click = click * 2;
+    clicks = clicks + 1;
+    clickCost = clickCost * 5;
     cursors = cursors * 2;
-    document.getElementById("powertaps").innerHTML = "You have " + clicks + " Power Clicks | Cost: " + clickCost + " cookies";
-    document.getElementById("messages").innerHTML = "You bought 1 Power Click. Now you have " + clicks + ".";
+    document.getElementById("pp").innerHTML = "You have " + clicks + " Coffee Machines | Cost: " + clickCost + " coffees";
+    document.getElementById("messages").innerHTML = "You bought 1 Coffee Machine (s). Now you have " + clicks + ".";
   } else {
-    cookies = cookies;
+    coffee = coffee;
     clicks = clicks;
     clickCost = clickCost;
   }
 });
-// tap function
-function tapper() {
-  cookies = cookies + cursors;
-  cookies = Math.ceil(cookies * 10) / 10;
-  document.getElementById("cookies").innerHTML = cookies + " cookies";
+
+var TumblerRun = function() {
+  coffee = coffee + tumblers;
+  coffee = Math.ceil(coffee * 10) / 10;
+  document.getElementById("coffee").innerHTML = coffee + " coffee";
 };
-// tapper changes
-document.querySelector(".tapper").addEventListener("click", function() {
-  if (cookies - cursorCost >= 0) {
-    console.log("tapper is equal to " + cursorCost);
-    cookies = cookies - cursorCost;
-    
-    cursors = cursors + 0.2;
-    setInterval(clickerRun, 1000);
-    cursor = cursor + 1;
-    cursorCost = Math.round(cursorCost * 1.15 ^ cursor);
-    document.getElementById("tappertext").innerHTML = "You have " + cursor + " Clickers | Cost: " + cursorCost + " cookies";
-    document.getElementById("messages").innerHTML = "You bought 1 Clicker. Now you have " + cursor + ".";
+
+document.querySelector(".tumbler").addEventListener("click", function() {
+  if (coffee - tumblerCost >= 0) {
+    console.log("clicker is equal to " + tumblerCost);
+    coffee = coffee - tumblerCost;
+    tumblerCost = Math.round(tumblerCost * 1.5);
+    tumblers = tumblers + 0.1;
+    setInterval(TumblerRun, 1000);
+    tumbler = tumbler+ 1;
+    document.getElementById("pc").innerHTML = "You have " + tumbler + " Clickers | Cost: " + tumblerCost + " coffee";
+    document.getElementById("messages").innerHTML = "You bought 1 Tumbler. Now you have " + tumbler + ".";
   }
 });
-//another increment option for when you buy a baker package
-function bakers() {
-    cookies = cookies + grandmas;
-    document.getElementById("cookies").innerHTML = cookies + " cookies"
+
+var internRun = function() {
+    coffee = coffee + interns;
+    document.getElementById("coffee").innerHTML = coffee + " coffee"
   }
-  //taps applied//html changes
-document.querySelector(".baker").addEventListener("click", function() {
-  if (cookies - grandmaCost >= 0) {
-    cookies = cookies - grandmaCost;
-    grandmas = grandmas + 1;
+ 
+document.querySelector(".intern").addEventListener("click", function() {
+  if (coffee - internCost >= 0) {
+    coffee = coffee - internCost;
+    internCost = Math.round(internCost * 1.5);
+    interns = interns + 1;
     setInterval(grandmaRun, 1000);
-    grandma = grandma + 1;
-    grandmaCost = Math.round(grandmaCost * 1.15 ^ grandma);
-    document.getElementById("bakertext").innerHTML = "You have " + baker + " baker| Cost: " + bakersCost + " cookies";
-    document.getElementById("messages").innerHTML = "You bought 1 baker. Now you have " + baker + ".";
+    interns = interns + 1;
+    document.getElementById("pg").innerHTML = "You have " + grandma + " nterns | Cost: " + internCost + " coffees";
+    document.getElementById("messages").innerHTML = "You bought 1 intern. Now you have " + intern + ".";
   }
 });
 
- function mill() {
-    cookies = cookies + mills;
-    document.getElementById("cookies").innerHTML = cookies + " cookies";
-  };
-
-document.querySelector(".mill").addEventListener("click", function() {
-  if (cookies - millCost >= 0) {
-    cookies = cookies - millCost;
-    farmCost = Math.round(millCost * 1.5);
-    mill = mill + 3;
+var franchiseRun = function() {
+    coffee = coffee + farms;
+    document.getElementById("coffee").innerHTML = coffee + " coffee"
+  }
+  
+document.querySelector(".dunkin").addEventListener("click", function() {
+  if (coffee - franchiseCost >= 0) {
+    coffee = coffee - franchiseCost;
+    franchiseCost = Math.round(farmCost * 1.5);
+    franchise = fanchise + 3;
     setInterval(farmRun, 1000);
-    mill = mill + 1;
-    document.getElementById("milltext").innerHTML = "You have " + mills + " mills | Cost: " + millCost + " cookies";
-    document.getElementById("messages").innerHTML = "You bought 1 millss. Now you have " + mill + ".";
+    franchise = franchise + 1;
+    document.getElementById("pf").innerHTML = "You have " + franchise + " Farms | Cost: " + franchiseCost + " coffee";
+    document.getElementById("messages").innerHTML = "You bought 1 Franchise. Now you have " + fanchise + ".";
   }
 });
-
