@@ -85,7 +85,7 @@ document.querySelector(".dunkin").addEventListener("click", function() {
     coffee = coffee - franchiseCost;
     franchiseCost = Math.round(farmCost * 1.5);
     franchise = fanchise + 3;
-    setInterval(farmRun, 1000);
+    setInterval(franchiseRun, 1000);
     franchise = franchise + 1;
     document.getElementById("pf").innerHTML = "You have " + franchise + " Farms | Cost: " + franchiseCost + " coffee";
     document.getElementById("messages").innerHTML = "You bought 1 Franchise. Now you have " + fanchise + ".";
